@@ -1,6 +1,6 @@
 {
     "name": "born/genesis",
-    "type": "drupal-custom-profile",
+    "type": "drupal-profile",
     "authors": [
         {
             "name": "Bobby Dean",
