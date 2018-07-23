@@ -1,0 +1,10 @@
+{
+    "name": "born/genesis",
+    "authors": [
+        {
+            "name": "Bobby Dean",
+            "email": "bobby@deanhome.net"
+        }
+    ],
+    "require": {}
+}
