@@ -1,10 +1,13 @@
 {
     "name": "born/genesis",
+    "type": "type:drupal-custom-profile",
     "authors": [
         {
             "name": "Bobby Dean",
             "email": "bobby@deanhome.net"
         }
     ],
-    "require": {}
+    "require": {
+        "composer/installers": "~1.0"
+    }
 }
