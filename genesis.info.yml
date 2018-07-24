@@ -9,6 +9,9 @@ themes:
 
 dependencies:
   - features
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter
 
 base profile:
   name: lightning
