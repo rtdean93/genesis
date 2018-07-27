@@ -13,7 +13,7 @@ dependencies:
   - admin_toolbar_tools
   - admin_toolbar_links_access_filter
   - pathauto
-  - modules_filter
+  - module_filter
 
 base profile:
   name: lightning
