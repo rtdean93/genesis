@@ -15,6 +15,7 @@ dependencies:
   - pathauto
   - module_filter
   - acsf
+  - acsf_sso
 
 base profile:
   name: lightning
