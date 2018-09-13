@@ -8,7 +8,44 @@
 /**
  * Implements hook_install().
  */
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for Lightning Profile.
+ *
+ * @see system_install()
+ */
 function genesis_install() {
-  // Add code here perform additional site information tasks, generate sample
-  // content, etc.
+
+  // Set the default and admin theme.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'cleanbase')
+    ->set('admin', 'seven')
+    ->save(TRUE);
+
+  // Enable the admin theme.
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+
+  // Set the path to the logo, favicon and README file based on install
+  // directory.
+  $lightning_path = drupal_get_path('profile', 'genesis');
+  \Drupal::configFactory()
+    ->getEditable('system.theme.global')
+    ->set('logo', [
+      'path' => $lightning_path . '/lightning.png',
+      'url' => '',
+      'use_default' => FALSE,
+    ])
+    ->set('favicon', [
+      'mimetype' => 'image/vnd.microsoft.icon',
+      'path' => $lightning_path . '/favicon.ico',
+      'url' => '',
+      'use_default' => FALSE,
+    ])
+    ->save(TRUE);
+
 }
